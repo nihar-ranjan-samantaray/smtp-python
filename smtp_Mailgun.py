@@ -2,11 +2,11 @@ import os
 import requests
 from random import randint
 
-MAILGUN_API_KEY = 'ec674077e581b54c8b7821b4b02f01ea-4de08e90-c43d8c37'
-MAILGUN_DOMAIN = 'sandboxd09cf6814c6e4186a780fd232d72bb67.mailgun.org'
-FROM_TITLE = 'U TURN GREEN'
-FROM_EMAIL = 'nihar@centroxy.com'
-TO_EMAIL = 'nihar@yopmail.com'
+MAILGUN_API_KEY = 
+MAILGUN_DOMAIN = 
+FROM_TITLE = 
+FROM_EMAIL = 
+TO_EMAIL = 
 
 randotp = randint(000000,999999)
 request = requests.post(f"https://api.mailgun.net/v2/{MAILGUN_DOMAIN}/messages",
