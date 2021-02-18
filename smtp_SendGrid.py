@@ -6,13 +6,17 @@ import smtplib
 msg = MIMEMultipart()
 message = "This is an email"
  
-msg['From'] = "nihar@centroxy.com"
-msg['To'] = "nihar@yopmail.com"
+FROM_MAIL
+TO_MAIL
+SENDGRID_API_KEY
+
+msg['From'] = FROM_MAIL
+msg['To'] = TO_MAIL
 msg['Subject'] = "Hello From SendGrid"
 
 apikey= "apikey"
-#password="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"
-password = os.getenv('SENDGRID_API_KEY')
+
+password = SENDGRID_API_KEY
 msg.attach(MIMEText(message, 'plain'))
 server = smtplib.SMTP('smtp.sendgrid.net: 587')
 server.starttls()
